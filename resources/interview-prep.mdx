@@ -1,0 +1,491 @@
+---
+title: 'Interview Preparation'
+description: 'Master technical and behavioral interviews for tech internships'
+icon: 'handshake'
+---
+
+## The Interview Process
+
+Tech internship interviews typically include multiple rounds designed to assess both your technical abilities and cultural fit.
+
+<Note>
+Most companies follow a similar pattern, though specifics vary. Understanding the typical flow helps you prepare more effectively.
+</Note>
+
+### Typical Interview Pipeline
+
+<Steps>
+  <Step title="Initial screening">
+    - 15-30 minute phone call with recruiter
+    - Questions about your background and interest
+    - Discussion of timeline and logistics
+    - Sometimes includes basic technical questions
+  </Step>
+  
+  <Step title="Technical assessment">
+    - Online coding challenge (1-2 hours)
+    - Or live coding screen (45-60 minutes)
+    - Focus on data structures and algorithms
+    - May include debugging or system design questions
+  </Step>
+  
+  <Step title="Technical interviews">
+    - Usually 2-4 rounds
+    - Live coding problems
+    - More complex algorithms
+    - Discussion of your projects and technical decisions
+  </Step>
+  
+  <Step title="Behavioral/final round">
+    - Cultural fit assessment
+    - Behavioral questions using STAR method
+    - Questions about teamwork and problem-solving
+    - Sometimes combined with a technical round
+  </Step>
+</Steps>
+
+<Tip>
+The process can take 2-6 weeks from application to offer. Some companies move faster, especially for competitive candidates.
+</Tip>
+
+## Technical Interview Preparation
+
+### Coding Challenges
+
+Most technical interviews focus on data structures, algorithms, and problem-solving.
+
+<AccordionGroup>
+  <Accordion title="Core topics to master">
+    **Data Structures:**
+    - Arrays and strings
+    - Linked lists
+    - Stacks and queues
+    - Hash tables/maps
+    - Trees (binary trees, BST)
+    - Graphs
+    - Heaps
+    
+    **Algorithms:**
+    - Searching and sorting
+    - Recursion and backtracking
+    - Dynamic programming
+    - Greedy algorithms
+    - Breadth-first search (BFS)
+    - Depth-first search (DFS)
+    - Two pointers technique
+    - Sliding window
+    
+    **Complexity Analysis:**
+    - Time complexity (Big O notation)
+    - Space complexity
+    - Optimization strategies
+  </Accordion>
+  
+  <Accordion title="Practice strategy">
+    Build your skills progressively:
+    
+    **Week 1-2: Fundamentals**
+    - Arrays, strings, and basic manipulation
+    - Hash tables for frequency counting
+    - Two pointers technique
+    - Start with easy problems
+    
+    **Week 3-4: Core data structures**
+    - Linked lists (reversal, cycle detection)
+    - Stacks and queues
+    - Binary trees (traversal, manipulation)
+    - Medium difficulty problems
+    
+    **Week 5-6: Advanced concepts**
+    - Dynamic programming basics
+    - Graph algorithms (BFS, DFS)
+    - Backtracking
+    - Mix of medium and hard problems
+    
+    **Week 7-8: Interview simulation**
+    - Timed practice problems
+    - Mock interviews
+    - Company-specific question patterns
+  </Accordion>
+  
+  <Accordion title="Where to practice">
+    Popular platforms for coding practice:
+    
+    - **LeetCode**: Most popular platform with company-specific questions
+      - Start with "Top Interview Questions"
+      - Focus on Easy and Medium problems
+      - Do company-tagged problems before interviews
+    
+    - **HackerRank**: Good for fundamentals and interview prep kits
+      - Structured learning paths
+      - Skills certification
+    
+    - **AlgoExpert**: Curated problems with video explanations
+      - Organized by difficulty and category
+      - Includes system design content
+    
+    - **Pramp/Interviewing.io**: Mock interview practice with peers
+      - Real interview simulation
+      - Practice communicating your thought process
+  </Accordion>
+  
+  <Accordion title="How many problems to solve">
+    Quality over quantity:
+    - **Minimum**: 50-100 problems covering core topics
+    - **Comfortable**: 150-200 problems with variety
+    - **Strong preparation**: 250+ problems including harder challenges
+    
+    Don't just solve problems—understand them:
+    - Review multiple solutions
+    - Understand time/space tradeoffs
+    - Recognize patterns across problems
+    - Practice explaining your approach out loud
+  </Accordion>
+</AccordionGroup>
+
+### Live Coding Best Practices
+
+<Warning>
+Many candidates fail not because they can't solve the problem, but because they don't communicate their thought process effectively.
+</Warning>
+
+**During the interview:**
+
+<Steps>
+  <Step title="Clarify the problem">
+    - Repeat the problem in your own words
+    - Ask about edge cases and constraints
+    - Confirm input/output format
+    - Ask about expected input size
+    
+    Example questions:
+    - "Can the array be empty?"
+    - "Should I handle negative numbers?"
+    - "What should I return if there's no solution?"
+    - "Are there any memory constraints?"
+  </Step>
+  
+  <Step title="Discuss your approach before coding">
+    - Think out loud about potential solutions
+    - Mention the data structures you're considering
+    - Discuss time and space complexity of your approach
+    - Get feedback from the interviewer before writing code
+  </Step>
+  
+  <Step title="Write clean, organized code">
+    - Use meaningful variable names
+    - Write helper functions for repeated logic
+    - Add comments for complex sections
+    - Keep proper indentation
+    - Don't rush—accuracy matters more than speed
+  </Step>
+  
+  <Step title="Test your solution">
+    - Walk through your code with the given example
+    - Test edge cases (empty input, single element, etc.)
+    - Catch bugs before the interviewer points them out
+    - Fix issues calmly and methodically
+  </Step>
+  
+  <Step title="Analyze complexity">
+    - State the time complexity
+    - State the space complexity
+    - Discuss possible optimizations
+    - Explain why your approach is efficient
+  </Step>
+</Steps>
+
+<Tip>
+If you're stuck, explain what you're thinking. Interviewers often provide hints to keep you moving. A collaborative approach is better than silent struggle.
+</Tip>
+
+## System Design Interviews
+
+For internships, system design interviews are less common but may appear for more advanced roles or return intern positions.
+
+### Key Concepts to Understand
+
+<CardGroup cols={2}>
+  <Card title="Scalability" icon="arrow-up-right-dots">
+    - Horizontal vs vertical scaling
+    - Load balancing
+    - Caching strategies
+    - Database sharding
+  </Card>
+  
+  <Card title="Reliability" icon="shield">
+    - Redundancy and replication
+    - Failure handling
+    - Backup strategies
+    - Health checks and monitoring
+  </Card>
+  
+  <Card title="Performance" icon="gauge-high">
+    - CDN usage
+    - Database indexing
+    - Caching (Redis, Memcached)
+    - Asynchronous processing
+  </Card>
+  
+  <Card title="Architecture patterns" icon="diagram-project">
+    - Client-server model
+    - Microservices vs monolith
+    - REST APIs
+    - Message queues
+  </Card>
+</CardGroup>
+
+### Approach to System Design Questions
+
+<Steps>
+  <Step title="Clarify requirements">
+    - Functional requirements (what should it do?)
+    - Non-functional requirements (scale, performance, reliability)
+    - Constraints and assumptions
+    - Estimated users and data volume
+  </Step>
+  
+  <Step title="High-level design">
+    - Draw basic architecture diagram
+    - Identify main components (client, server, database, cache)
+    - Explain data flow
+    - Discuss API design
+  </Step>
+  
+  <Step title="Deep dive into components">
+    - Database schema design
+    - Technology choices (SQL vs NoSQL)
+    - Caching strategy
+    - How to handle scale
+  </Step>
+  
+  <Step title="Address bottlenecks">
+    - Identify potential issues
+    - Discuss tradeoffs
+    - Propose optimizations
+    - Consider edge cases
+  </Step>
+</Steps>
+
+<Note>
+For internship interviews, you don't need to design systems as complex as Netflix or Uber. Focus on demonstrating logical thinking and understanding of basic architectural principles.
+</Note>
+
+## Behavioral Interviews
+
+Behavioral questions assess how you work with others, handle challenges, and approach problems.
+
+### The STAR Method
+
+Structure your answers using STAR:
+
+<AccordionGroup>
+  <Accordion title="S - Situation" icon="1">
+    Set the context for your story:
+    - Where were you? (class project, previous internship, etc.)
+    - What was the background?
+    - Who was involved?
+    - Keep it brief—1-2 sentences
+  </Accordion>
+  
+  <Accordion title="T - Task" icon="2">
+    Explain what needed to be done:
+    - What was the challenge or goal?
+    - What was your specific responsibility?
+    - Why was it important?
+  </Accordion>
+  
+  <Accordion title="A - Action" icon="3">
+    Describe what you did (this is the longest part):
+    - What specific steps did you take?
+    - What decisions did you make?
+    - Why did you choose this approach?
+    - Focus on YOUR actions, not the team's
+  </Accordion>
+  
+  <Accordion title="R - Result" icon="4">
+    Share the outcome:
+    - What happened as a result of your actions?
+    - Quantify the impact if possible
+    - What did you learn?
+    - How did it benefit the team or project?
+  </Accordion>
+</AccordionGroup>
+
+### Common Behavioral Questions
+
+Prepare stories for these themes:
+
+<Tabs>
+  <Tab title="Leadership & Initiative">
+    - "Tell me about a time you led a team or project"
+    - "Describe a situation where you took initiative"
+    - "Give an example of when you had to motivate others"
+    
+    **What they're looking for:**
+    - Ability to take ownership
+    - Communication and organization skills
+    - How you influence without authority
+  </Tab>
+  
+  <Tab title="Problem-Solving">
+    - "Tell me about a challenging technical problem you solved"
+    - "Describe a time when you had to learn something new quickly"
+    - "Give an example of debugging a difficult issue"
+    
+    **What they're looking for:**
+    - Analytical thinking
+    - Persistence and resourcefulness
+    - Learning ability
+  </Tab>
+  
+  <Tab title="Teamwork & Conflict">
+    - "Tell me about a time you disagreed with a teammate"
+    - "Describe a difficult team situation and how you handled it"
+    - "Give an example of collaborating with others"
+    
+    **What they're looking for:**
+    - Communication skills
+    - Empathy and emotional intelligence
+    - Conflict resolution approach
+  </Tab>
+  
+  <Tab title="Failure & Growth">
+    - "Tell me about a time you failed"
+    - "Describe a mistake you made and what you learned"
+    - "Give an example of receiving critical feedback"
+    
+    **What they're looking for:**
+    - Self-awareness and humility
+    - Growth mindset
+    - Accountability
+  </Tab>
+</Tabs>
+
+<Tip>
+Prepare 5-7 stories that can be adapted to answer different types of questions. The same story about a challenging team project could address teamwork, problem-solving, or leadership questions.
+</Tip>
+
+### Your Questions to Ask
+
+<Warning>
+Always prepare questions to ask your interviewer. Asking thoughtful questions demonstrates genuine interest and helps you evaluate the company.
+</Warning>
+
+**Strong questions to ask:**
+
+**About the role:**
+- "What does a typical day look like for an intern on this team?"
+- "What kind of projects do interns typically work on?"
+- "How does the team handle mentorship for interns?"
+- "What technologies will I have the opportunity to work with?"
+
+**About the team:**
+- "Can you describe the team structure and how interns fit in?"
+- "What's the collaboration style like—pair programming, code reviews, etc.?"
+- "How does the team balance learning opportunities with meaningful contributions?"
+
+**About growth:**
+- "What does success look like for an intern in this role?"
+- "Are there opportunities for return offers?"
+- "What kind of feedback and evaluation process do you have for interns?"
+
+**About culture:**
+- "What do you enjoy most about working here?"
+- "How would you describe the company culture?"
+- "What's the work-life balance like during the internship?"
+
+<Note>
+Avoid asking questions that can be easily answered by looking at the company website. Show that you've done your research.
+</Note>
+
+## Interview Day Tips
+
+### Technical Setup (for virtual interviews)
+
+<Steps>
+  <Step title="Test everything beforehand">
+    - Camera and microphone quality
+    - Internet connection stability
+    - Screen sharing functionality
+    - Coding environment or platform
+    - Have a backup plan (phone hotspot, alternative location)
+  </Step>
+  
+  <Step title="Prepare your environment">
+    - Quiet room with good lighting
+    - Clean, professional background
+    - Close unnecessary applications
+    - Have water nearby
+    - Silence phone and notifications
+  </Step>
+  
+  <Step title="Join early">
+    - Log in 5-10 minutes early
+    - Test audio/video in the waiting room
+    - Have your resume open for reference
+    - Keep a notepad for taking notes
+  </Step>
+</Steps>
+
+### Mental Preparation
+
+<CardGroup cols={2}>
+  <Card title="Before the interview" icon="clock">
+    - Review your resume and projects
+    - Do 1-2 warm-up coding problems
+    - Review company research notes
+    - Arrive/log in early
+    - Take deep breaths and stay calm
+  </Card>
+  
+  <Card title="During the interview" icon="bullseye">
+    - Think out loud
+    - Ask clarifying questions
+    - Take your time—accuracy over speed
+    - Stay positive even if stuck
+    - Be authentic and enthusiastic
+  </Card>
+  
+  <Card title="After the interview" icon="envelope">
+    - Send thank you email within 24 hours
+    - Mention specific discussion points
+    - Reiterate your interest
+    - Keep it brief and professional
+  </Card>
+  
+  <Card title="If you don't get it" icon="arrow-right">
+    - Ask for feedback if possible
+    - Identify areas to improve
+    - Keep practicing and applying
+    - Every interview makes you better
+  </Card>
+</CardGroup>
+
+## Practice Resources
+
+Make use of these resources to strengthen your interview skills:
+
+<Tip>
+**Recommended study plan:**
+- **1-2 months before interviews**: Focus on coding practice (50-100 problems)
+- **2-4 weeks before**: Add mock interviews and system design study
+- **1 week before**: Company-specific prep, behavioral practice, polish projects
+- **Day before**: Light review, relax, and get good sleep
+</Tip>
+
+### Build Your Skills
+
+- **Coding practice**: LeetCode, HackerRank, CodeSignal
+- **System design**: System Design Primer (GitHub), Grokking the System Design Interview
+- **Mock interviews**: Pramp, Interviewing.io, peer practice
+- **Behavioral prep**: Write out STAR stories, practice with friends
+- **Company research**: Glassdoor, Blind, company engineering blogs
+
+### Community Resources
+
+- [CSCareers Discord](https://discord.gg/cscareers): Connect with other students, share experiences, get advice
+- University career services: Mock interviews, resume reviews, alumni connections
+- Online communities: Reddit r/cscareerquestions, r/csMajors
+
+Remember: interviews are a skill you can improve with practice. Every interview makes you better prepared for the next one.

@@ -1,80 +1,124 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: Quickstart
+description: Get started browsing internships and contributing to the repository
 ---
 
-## Get started in three steps
+# Quickstart
 
-Get your documentation site running locally and make your first customization.
+This guide will help you quickly start using the Summer 2026 Tech Internships repository to find opportunities and contribute back to the community.
 
-### Step 1: Set up your local environment
+## Browse internship listings
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
+<Steps>
+  <Step title="Navigate to the README">
+    Visit the [Summer 2026 Internships repository](https://github.com/vanshb03/Summer2026-Internships) and view the main README.md file. The internship table starts after the "The List" heading.
+  </Step>
+  
+  <Step title="Understand the table format">
+    The internship listings are displayed in a markdown table with the following columns:
     
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
+    ```markdown
+    | Company | Role | Location | Application/Link | Date Posted |
+    | ------- | ---- | -------- | ---------------- | ----------- |
+    ```
     
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 2: Deploy your changes
-
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
+    Example entry:
+    ```markdown
+    | Thrivent | Associate Software Engineer Intern | Remote | Apply Button | Feb 07 |
+    ```
+  </Step>
+  
+  <Step title="Learn the legend">
+    Pay attention to these important symbols in the Company or Role columns:
     
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+    - **🛂** - Does NOT offer sponsorship
+    - **🇺🇸** - Requires U.S. Citizenship
+    - **🔒** - Internship application is closed
+    
+    These indicators help you quickly identify which positions match your eligibility requirements.
+  </Step>
+  
+  <Step title="Apply to positions">
+    Click the "Apply" button in the Application/Link column to navigate directly to the company's application portal. The listings are sorted by date posted, with the newest opportunities at the top.
+  </Step>
+</Steps>
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+## Join Discord for notifications
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+Don't miss new opportunities! The [Ouckah Discord server](https://discord.gg/pSaBUXsTkF) sends notifications immediately when internships are added to the repository.
 
-### Step 3: Go live
+<Note>
+Joining Discord gives you a competitive advantage by letting you apply as soon as positions open.
+</Note>
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+To join:
+
+1. Click the [Discord invite link](https://discord.gg/pSaBUXsTkF)
+2. Accept the server invite
+3. Configure your notification preferences to get alerted about new internships
+4. Connect with fellow students searching for internships
+
+## Contribute a new internship
+
+Found an internship that's not on the list? Help the community by adding it!
+
+<Steps>
+  <Step title="Create a new issue">
+    Navigate to the [issues page](https://github.com/vanshb03/Summer2026-Internships/issues/new/choose) and click "New issue."
+  </Step>
+  
+  <Step title="Select the New Internship template">
+    Choose the **New Internship** issue template from the available options.
+  </Step>
+  
+  <Step title="Fill in the required information">
+    Complete the form with details about the internship:
+    
+    - **Link to Internship Posting** - Direct URL to the application page
+    - **Company Name** - Name of the hiring company
+    - **Internship Title** - Official title of the position
+    - **Location** - City, State format (use "|" to separate multiple locations)
+    - **Season** - Summer, Fall, Winter, or Spring
+    - **Sponsorship Status** - Whether the position offers visa sponsorship
+    - **Application Status** - Whether applications are currently open
+  </Step>
+  
+  <Step title="Submit the issue">
+    Click "Submit new issue." A member of the team will review your submission, and if approved, it will be automatically added to the README by a GitHub action.
+    
+    <Note>
+    Make a separate submission for each unique position, even if they're for the same company.
+    </Note>
+  </Step>
+</Steps>
+
+## Understanding the data structure
+
+For developers interested in programmatically accessing internship data, all listings are stored in structured JSON format:
+
+```json
+{
+  "company_name": "Tesla",
+  "title": "Software Engineer Intern",
+  "locations": ["Palo Alto, CA"],
+  "url": "https://www.tesla.com/careers/...",
+  "season": "Summer",
+  "sponsorship": "Other",
+  "active": true,
+  "date_posted": 1748135738,
+  "date_updated": 1748135738
+}
+```
+
+You can find this data at `.github/scripts/listings.json` in the repository.
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
-
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Read contribution guidelines" icon="book" href="/contributing/how-to-contribute">
+    Learn more about contributing internships and the review process
+  </Card>
+  <Card title="Browse all listings" icon="list" href="/guides/browsing-listings">
+    Explore advanced search and filtering techniques
+  </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

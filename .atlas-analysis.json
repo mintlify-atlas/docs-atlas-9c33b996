@@ -1,23 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Summer 2026 Tech Internships",
+  "projectType": "general",
+  "projectName": "Summer 2026 Tech Internships",
+  "projectDescription": "A collaborative repository tracking software, tech, CS, PM, and quant internships for Summer 2026",
   "theme": "mint",
-  "colors": {
-    "primary": "#0073e6",
-    "light": "#4da3ff",
-    "dark": "#005bb5"
-  },
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/vanshb03/Summer2026-Internships"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/vanshb03/Summer2026-Internships"
-    }
-  },
+  "primaryColor": "#0073e6",
+  "lightColor": "#4da3ff",
+  "darkColor": "#005bb5",
   "navigation": {
     "tabs": [
       {
@@ -79,5 +67,26 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Collaborative internship tracking for Summer 2026",
+    "1,700+ verified tech internship listings",
+    "Community-driven updates via GitHub issues",
+    "Automated listing management with GitHub Actions",
+    "Discord integration for real-time notifications",
+    "Support for US, Canada, and remote positions",
+    "Sponsorship and citizenship requirement indicators",
+    "Off-season (Spring/Fall) internship tracking",
+    "Integration with CSCareers Discord community"
+  ],
+  "publicApiSurface": [
+    "GitHub Issue Templates: New Internship, Close Internship, Other",
+    "listings.json - Structured JSON data with 1,700+ internship entries",
+    "README.md - Main summer internship listing table",
+    "OFFSEASON_README.md - Spring/Fall internship listing table",
+    "CONTRIBUTING.md - Contribution guidelines",
+    "Automated workflows: contribution_approved.yml, update_readmes.yml",
+    "Discord webhook integration for notifications",
+    "Internship data fields: company, role, location, url, sponsorship, season, active status"
+  ]
 }

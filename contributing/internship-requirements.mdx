@@ -1,0 +1,203 @@
+---
+title: Internship Requirements
+description: Criteria that internships must meet to be added to the repository
+---
+
+Before submitting an internship, verify that it meets all of the following requirements. Submissions that don't meet these criteria will not be approved.
+
+## Core Requirements
+
+All internships added to the list must meet these three requirements:
+
+### 1. Tech-Related Position
+
+The internship must be in one of the following categories:
+
+<CardGroup cols={2}>
+  <Card title="Software/Computer Engineering" icon="code">
+    Development roles including frontend, backend, full-stack, mobile, embedded systems
+  </Card>
+  
+  <Card title="Computer/Data Science" icon="chart-line">
+    Data science, data engineering, data analytics, machine learning, AI research
+  </Card>
+  
+  <Card title="Product Management" icon="briefcase">
+    Technical product management roles (TPM, APM programs)
+  </Card>
+  
+  <Card title="Quantitative Roles" icon="calculator">
+    Quantitative research, quantitative trading, quantitative development
+  </Card>
+  
+  <Card title="Other Tech Roles" icon="laptop">
+    Site reliability engineering, DevOps, cybersecurity, systems engineering, technical program management
+  </Card>
+</CardGroup>
+
+<Warning>
+  Non-technical internships (marketing, finance, HR, sales, etc.) are **not accepted**, even at tech companies.
+</Warning>
+
+### 2. Geographic Location
+
+The internship must be located in:
+- **United States** (any state or territory)
+- **Canada** (any province or territory)
+- **Remote** (available to candidates in US/Canada)
+
+<Note>
+  Internships in other countries are not accepted, even if they're at major tech companies or offer remote work from other regions.
+</Note>
+
+**Valid location examples**:
+- ✓ San Francisco, CA
+- ✓ New York, NY | Remote
+- ✓ Toronto, ON
+- ✓ Austin, TX | Seattle, WA | Boston, MA
+- ✓ Remote
+
+**Invalid location examples**:
+- ✗ London, UK
+- ✗ Bangalore, India
+- ✗ Remote (EU only)
+- ✗ Singapore
+
+### 3. Not Already Listed
+
+The exact internship position must not already exist in the repository.
+
+<Steps>
+  <Step title="Search the README">
+    Check the [main README](https://github.com/Ouckah/Summer2025-Internships) for the company and role
+  </Step>
+  
+  <Step title="Search Open Issues">
+    Look through [open issues](https://github.com/Ouckah/Summer2025-Internships/issues) to see if someone else already submitted it
+  </Step>
+  
+  <Step title="Check Recently Closed Issues">
+    Review [recently closed issues](https://github.com/Ouckah/Summer2025-Internships/issues?q=is%3Aissue+is%3Aclosed) in case it was just added
+  </Step>
+</Steps>
+
+<Accordion title="What counts as a duplicate?">
+  **Duplicates** (don't submit):
+  - Exact same company, role title, and season already listed
+  - Someone already submitted an issue for this position that's pending review
+  
+  **Not duplicates** (okay to submit):
+  - Same company but different role (e.g., "Software Engineering Intern" vs "Machine Learning Intern")
+  - Same role but different season (e.g., Summer 2025 vs Fall 2025)
+  - Same role but different location if tracked separately by the company
+  - Updated posting with significant changes (in this case, create a regular issue explaining the update needed)
+</Accordion>
+
+## What Qualifies as Tech-Related
+
+Here are detailed examples to help you determine if an internship qualifies:
+
+### Definitely Qualifies ✓
+
+- Software Engineer Intern
+- Data Scientist Intern
+- Machine Learning Intern
+- Product Manager Intern (Technical)
+- Quantitative Researcher Intern
+- Site Reliability Engineer Intern
+- Security Engineer Intern
+- Cloud Engineer Intern
+- Mobile Developer Intern
+- DevOps Intern
+- Systems Engineer Intern
+- AI Research Intern
+- Backend/Frontend/Full-Stack Engineer Intern
+- Data Engineer Intern
+- Technical Program Manager Intern
+- Embedded Systems Engineer Intern
+
+### Does Not Qualify ✗
+
+- Marketing Intern (even at tech companies)
+- Finance/Accounting Intern
+- Human Resources Intern
+- Business Analyst Intern (non-technical)
+- Sales Intern
+- Legal Intern
+- Operations Intern (non-technical)
+- Customer Success Intern
+- Recruiting Intern
+- UX Designer Intern (unless explicitly technical/engineering focused)
+- Content Writer Intern
+
+### Borderline Cases
+
+<AccordionGroup>
+  <Accordion title="Technical Product Manager">
+    ✓ **Qualifies** if the role involves working directly with engineering teams on technical products, making technical decisions, or requires technical background.
+    
+    ✗ **Does not qualify** if it's purely business-focused product management.
+  </Accordion>
+  
+  <Accordion title="Data Analyst">
+    ✓ **Qualifies** if the role involves programming (Python, R, SQL), building data pipelines, or technical analytics work.
+    
+    ✗ **Does not qualify** if it's primarily Excel-based business analytics.
+  </Accordion>
+  
+  <Accordion title="Technical Writer">
+    ✓ **Qualifies** if it's for developer documentation, API documentation, or requires programming knowledge.
+    
+    ✗ **Does not qualify** if it's general content writing or marketing content.
+  </Accordion>
+  
+  <Accordion title="UX/UI Designer">
+    ✓ **Qualifies** if the role is specifically "UI Engineer", "Design Engineer", or requires frontend development skills.
+    
+    ✗ **Does not qualify** if it's pure design work without coding.
+  </Accordion>
+</AccordionGroup>
+
+## Why These Requirements Exist
+
+These requirements ensure the repository:
+
+1. **Stays focused**: Students looking for tech internships find relevant opportunities
+2. **Remains manageable**: Limits scope to maintain quality and keep the list current
+3. **Serves its audience**: Targets CS/tech students in North America
+4. **Avoids duplicates**: Prevents confusion and maintains data quality
+
+<Note>
+  If you're unsure whether an internship qualifies, err on the side of submitting it. The review team will evaluate it and can provide guidance if it doesn't meet the criteria.
+</Note>
+
+## Closing Internships
+
+If you notice an internship that's no longer accepting applications, you can help keep the list current by using the [Close Internship template](https://github.com/Ouckah/Summer2025-Internships/issues/new/choose).
+
+Valid reasons to close an internship:
+- Position filled
+- Application deadline passed
+- Posting removed by company
+- Position cancelled
+- Duplicate listing
+
+The close request template includes these fields:
+
+```yaml
+name: Close Internship
+description: Request to close/archive an internship listing
+labels: ["close_internship"]
+body:
+  - Company Name (required)
+  - Role Title (required)
+  - Job URL (optional)
+  - Reason for closing (required):
+      - Position filled
+      - Application deadline passed
+      - Posting removed by company
+      - Duplicate listing
+      - Position cancelled
+      - Other
+  - Additional Information (optional)
+```

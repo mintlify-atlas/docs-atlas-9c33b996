@@ -1,0 +1,267 @@
+---
+title: Submission Guidelines
+description: Best practices and detailed guidance for filling out the internship submission form
+---
+
+When submitting an internship through the GitHub issue template, you'll need to provide specific information. This guide walks through each field and provides best practices.
+
+## Issue Template Fields
+
+The New Internship issue template contains the following fields:
+
+### Link to Internship Posting (Required)
+
+**What to provide**: The direct URL to the internship application page
+
+**Example**: `https://example.com/link/to/posting`
+
+<Note>
+  Provide the most direct link possible to the application. Avoid linking to general career pages.
+</Note>
+
+### Company Name (Required)
+
+**What to provide**: The official name of the company offering the internship
+
+**Example**: `Google`
+
+**Tips**:
+- Use the official company name as it appears on their website
+- Avoid abbreviations unless that's the official name
+- For subsidiaries, include the parent company if relevant (e.g., "YouTube (Google)")
+
+### Internship Title (Required)
+
+**What to provide**: The exact title of the internship position
+
+**Example**: `ML Software Intern`
+
+**Tips**:
+- Copy the title exactly as it appears in the posting
+- If sponsorship status is "Other", specify it in parentheses at the end (e.g., "Software Engineer Intern (STEM OPT only)")
+- Keep it concise but descriptive
+
+### Location (Required)
+
+**What to provide**: Where the internship is physically located or if it's remote
+
+**Example**: `San Francisco, CA | Austin, TX | Remote`
+
+**Format requirements**:
+- Separate multiple locations with a pipe `|` character
+- Include "Remote" if a remote option is available
+- Use standard city and state/province abbreviations
+- For Canadian locations: `Toronto, ON | Vancouver, BC`
+
+<Warning>
+  The internship must be located in the United States, Canada, or be Remote. Other countries are not accepted.
+</Warning>
+
+### Season (Required)
+
+**What to provide**: Select the season when the internship takes place
+
+**Options**:
+- Summer
+- Winter
+- Spring
+- Fall
+
+<Note>
+  Choose the season during which the intern will actually be working, not when applications are due.
+</Note>
+
+### Sponsorship Status (Required)
+
+**What to provide**: Whether the company offers visa sponsorship
+
+**Options**:
+- **Offers Sponsorship**: Company explicitly states they sponsor visas
+- **Does Not Offer Sponsorship**: Company explicitly states no sponsorship
+- **U.S. Citizenship is Required**: Position requires U.S. citizenship
+- **Other**: Status doesn't fit above categories
+
+<Accordion title="When to use 'Other'">
+  Select "Other" if:
+  - The posting specifies work authorization requirements that don't fit the other categories (e.g., "STEM OPT eligible", "CPT required", "Green Card holders only")
+  - The posting doesn't specify sponsorship status
+  
+  If you select "Other", specify the actual status in parentheses at the end of the Internship Title.
+</Accordion>
+
+### Application Status (Required)
+
+**What to provide**: Whether the position is currently accepting applications
+
+**Options**:
+- Yes
+- No
+
+**When to select "No"**:
+- Applications haven't opened yet but the posting is published
+- The posting says "Check back later"
+
+### Email Address (Optional)
+
+**What to provide**: The email associated with your GitHub account
+
+**Why provide it**:
+- Your contribution will be attributed to you in the git commit
+- Without it, the commit will be made by `actions@github.com`
+
+<Note>
+  Your email will only be used for git attribution. It won't be shared or used for any other purpose.
+</Note>
+
+### Extra Notes (Optional)
+
+**What to provide**: Additional context that might help reviewers
+
+**Examples**:
+- "This is a newly funded startup in the VR space"
+- "Application requires completion of coding challenge"
+- "Rolling admission - closes when filled"
+
+**Tips**:
+- This information won't appear in the README
+- Use it to provide context that validates your submission
+- Mention if the role is unique or might seem questionable
+
+## One Submission Per Position
+
+<Warning>
+  **Important**: Make a new submission for each unique position, even if they are for the same company.
+</Warning>
+
+If a company has multiple internship postings, submit each one separately:
+
+**Good**:
+- Issue 1: Google - Software Engineering Intern
+- Issue 2: Google - Machine Learning Intern
+- Issue 3: Google - Site Reliability Engineering Intern
+
+**Bad**:
+- Single issue listing all three Google positions
+
+## Viewing the Full Template
+
+The complete YAML structure of the issue template:
+
+<Accordion title="View Full new_internship.yaml">
+  ```yaml
+  name: New Internship
+  description: Contribute an internship to our list
+  title: "New Internship"
+  labels: ["new_internship"]
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          ## New Internship Contribution Form
+          Thanks for taking the time to contribute!
+          > Make sure you've read `CONTRIBUTING.md` before submitting
+    
+    - type: input
+      id: url
+      attributes:
+        label: Link to Internship Posting
+        placeholder: ex. example.com/link/to/posting
+      validations:
+        required: true
+    
+    - type: input
+      id: company_name
+      attributes:
+        label: Company Name
+        placeholder: ex. Google
+      validations:
+        required: true
+    
+    - type: input
+      id: title
+      attributes:
+        label: Internship Title
+        placeholder: ex. ML Software Intern
+      validations:
+        required: true
+    
+    - type: input
+      id: location
+      attributes:
+        label: Location
+        description: |
+          Where is the internship located? 
+          Please separate locations with a pipe "|" if there are multiple options. 
+          Include Remote if remote option available.
+        placeholder: San Francisco, CA | Austin, TX | Remote
+      validations:
+        required: true
+    
+    - type: dropdown
+      id: season
+      attributes:
+        label: What season is this internship for?
+        multiple: false
+        options:
+          - "Summer"
+          - "Winter"
+          - "Spring"
+          - "Fall"
+      validations:
+        required: true
+    
+    - type: dropdown
+      id: sponsorship
+      attributes:
+        label: Does this internship offer sponsorship?
+        multiple: false
+        options:
+          - Other
+          - Offers Sponsorship
+          - Does Not Offer Sponsorship
+          - U.S. Citizenship is Required
+      validations:
+        required: true
+    
+    - type: dropdown
+      id: active
+      attributes:
+        label: Is this internship currently accepting applications?
+        multiple: false
+        options:
+          - "Yes"
+          - "No"
+      validations:
+        required: true
+    
+    - type: input
+      id: email
+      attributes:
+        label: Email associated with your GitHub account (Optional)
+        description: |
+          If you would like to be listed as the contributor when our github action 
+          commits your contribution, please provide your email.
+        placeholder: ex. firstLast@gmail.com
+      validations:
+        required: false
+    
+    - type: textarea
+      id: reason
+      attributes:
+        label: Extra Notes (Optional)
+        description: |
+          Optionally, provide extra context about the internship.
+          This will not be shown on the repo.
+        placeholder: This is an exciting new company in the vr space...
+      validations:
+        required: false
+  ```
+</Accordion>
+
+## Before You Submit
+
+Double-check that your internship:
+- ✓ Meets all [requirements](/contributing/internship-requirements)
+- ✓ Doesn't already exist in the list
+- ✓ Has accurate and complete information
+- ✓ Includes a valid, direct link to the application

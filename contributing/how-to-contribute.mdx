@@ -1,0 +1,91 @@
+---
+title: How to Contribute
+description: Learn how to contribute internship listings to the repository through GitHub issues
+---
+
+Thank you for your interest in contributing to the Ouckah & CSCareers Internship List! This repository makes it easy to add internships through an automated submission process.
+
+## Contribution Workflow
+
+The entire contribution process is automated through GitHub issues. Once you submit an internship, our team reviews it and the system automatically adds it to the appropriate README.
+
+<Steps>
+  <Step title="Create a New Issue">
+    Navigate to the [GitHub repository](https://github.com/Ouckah/Summer2025-Internships/issues/new/choose) and create a new issue.
+  </Step>
+  
+  <Step title="Select the New Internship Template">
+    Choose the **New Internship** issue template from the available options.
+  </Step>
+  
+  <Step title="Fill Out the Form">
+    Complete all required fields in the issue form with information about the internship. See [Submission Guidelines](/contributing/submission-guidelines) for detailed guidance on each field.
+    
+    <Note>
+      Please make a new submission for each unique position, **even if they are for the same company**.
+    </Note>
+  </Step>
+  
+  <Step title="Submit and Wait for Review">
+    Submit the issue and wait for a team member to review your submission.
+  </Step>
+</Steps>
+
+## What Happens After Submission
+
+Once you've submitted your internship:
+
+1. **Review**: A team member reviews your submission to ensure it meets the [internship requirements](/contributing/internship-requirements)
+2. **Approval**: If approved, the issue is labeled with `approved`
+3. **Automation**: A GitHub Action workflow automatically:
+   - Extracts the internship data from your issue
+   - Adds it to the `listings.json` file
+   - Updates the appropriate README file
+   - Commits the changes to the repository
+   - Closes your issue with a success message
+
+<Accordion title="View the GitHub Action Workflow">
+  The automation is handled by the `contribution_approved.yml` workflow, which triggers when an issue receives the `approved` label:
+  
+  ```yaml
+  name: Contribution Approved
+  
+  on:
+    issues:
+      types: ["labeled"]
+  
+  jobs:
+    run-python-script:
+      runs-on: ubuntu-latest
+      if: github.event.label.name == 'approved'
+      
+      steps:
+        - name: execute contribution_approved.py
+          run: python .github/scripts/contribution_approved.py
+          
+        - name: execute update_readmes.py
+          run: python .github/scripts/update_readmes.py
+          
+        - name: Auto Close Issue
+          run: gh issue close --comment "Your contribution was accepted. Auto-closing issue"
+  ```
+</Accordion>
+
+## How Your Internship Appears
+
+Your internship will be automatically formatted and added to the README as a table row:
+
+| Company | Role | Location | Application/Link | Date Posted |
+| --- | --- | --- | :---: | :---: |
+| **[Example Company]()** | Software Engineering Internship Example | San Francisco, CA | Apply Button |  |
+
+## Alternative Contribution Methods
+
+While we strongly prefer the GitHub issue template method, you can also:
+
+- **Close an Internship**: Use the [Close Internship template](https://github.com/Ouckah/Summer2025-Internships/issues/new/choose) to report positions that are no longer accepting applications
+- **Update Existing Listings**: Create a regular issue describing the needed changes
+
+<Warning>
+  Make sure you've read the [Internship Requirements](/contributing/internship-requirements) before submitting to ensure your contribution meets our criteria.
+</Warning>
